@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PS-05: Intelligent Multilingual Document Understanding</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body class="light-mode">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">PS-05</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about">About Challenge</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#upload">Upload</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bulk">Bulk Upload</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item">
+                        <button id="themeToggle" class="btn btn-link nav-link">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <h1>PS-05: Intelligent Multilingual Document Understanding</h1>
+            <p class="lead">AI-powered system for multilingual, layout-aware document parsing and structured extraction.</p>
+            <a href="#upload" class="btn btn-primary btn-lg">Get Started</a>
+        </div>
+    </section>
+
+    <!-- Features -->
+    <section class="features">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-brain"></i>
+                        <h3>Multilingual Parsing</h3>
+                        <p>Detects Hindi, Urdu, Arabic, English, Persian, etc.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-file-alt"></i>
+                        <h3>Layout Preservation</h3>
+                        <p>Extracts structured data while maintaining visual hierarchy.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="feature-card">
+                        <i class="fas fa-code"></i>
+                        <h3>Smart Output</h3>
+                        <p>Generates JSON with semantic bounding boxes and natural-language explanations.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Single Upload Section -->
+    <section id="upload" class="upload-section">
+        <div class="container">
+            <h2>Single Document Inference</h2>
+            <div class="upload-box" id="singleUploadBox">
+                <input type="file" id="singleFileInput" accept=".png,.jpg,.jpeg" class="file-input" hidden>
+                <div class="upload-content">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <p>Drag and drop your image here or click to browse</p>
+                    <small>Supported formats: PNG, JPG, JPEG</small>
+                </div>
+            </div>
+            <div id="previewContainer" class="mt-4" style="display: none;">
+                <img id="imagePreview" class="img-fluid" alt="Preview">
+                <button id="analyzeBtn" class="btn btn-primary mt-3">Analyze Document</button>
+            </div>
+            <div id="resultContainer" class="mt-4" style="display: none;">
+                <img id="annotatedImage" class="img-fluid" alt="Annotated Image">
+                <button id="downloadBtn" class="btn btn-secondary mt-3">Download Annotated Image</button>
+                <div class="json-viewer mt-3">
+                    <button class="btn btn-link" type="button" data-bs-toggle="collapse" data-bs-target="#jsonContent">
+                        View Annotations
+                    </button>
+                    <div class="collapse" id="jsonContent">
+                        <pre id="jsonViewer"></pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Bulk Upload Section -->
+<section id="bulk" class="bulk-section">
+    <div class="container">
+        <h2>Bulk Processing Mode</h2>
+        <div class="upload-box" id="bulkUploadBox">
+            <input type="file" id="bulkFileInput" accept=".png,.jpg,.jpeg" multiple class="file-input" hidden>
+            <div class="upload-content">
+                <i class="fas fa-files"></i>
+                <p>Select multiple files for batch processing</p>
+                <small>Supported formats: PNG, JPG, JPEG</small>
+            </div>
+        </div>
+        
+        <div id="bulkPreview" class="mt-4">
+            <ul id="fileList" class="list-group"></ul>
+            <button id="batchAnalyzeBtn" class="btn btn-primary mt-3" style="display: none;">Run Batch Analysis</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div id="bulkProgress" class="mt-4" style="display: none;">
+            <h5 id="progressText">Processing...</h5>
+            <div class="progress" style="height: 25px;">
+                <div id="progressBar" class="progress-bar progress-bar-striped progress-bar-animated" 
+                     role="progressbar" style="width: 0%">0%</div>
+            </div>
+        </div>
+
+        <!-- Results Container -->
+        <div id="bulkResults" class="mt-4" style="display: none;"></div>
+    </div>
+</section>
+
+    <!-- About Challenge Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <h2>About The Challenge</h2>
+            <div class="about-content">
+                <p>PS-05 focuses on advancing the state-of-the-art in:</p>
+                <ul>
+                    <li>Multilingual OCR and document layout detection</li>
+                    <li>Extracting tables, charts, maps, and text as structured data</li>
+                    <li>Producing output JSON with bbox coordinates, natural language descriptions, and language identification</li>
+                </ul>
+
+                <div class="stage-cards">
+                    <div class="row">
+                        <div class="col-md-4">
+                            <div class="stage-card">
+                                <h4>Stage-1</h4>
+                                <p>Layout detection (mAP)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stage-card">
+                                <h4>Stage-2</h4>
+                                <p>Table/Chart/Map to Text (T2T-Gen, BleuRT)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="stage-card">
+                                <h4>Stage-3</h4>
+                                <p>Full multilingual structured understanding</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2>Contact Us</h2>
+            <div class="row">
+                <div class="col-md-6 offset-md-3">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" placeholder="Name" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" placeholder="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" rows="4" placeholder="Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>© 2025 Intelligent Multilingual Document Understanding | Powered by FastAPI + YOLOv8</p>
+        </div>
+    </footer>
+
+    <!-- Loading Spinner -->
+    <div id="loadingSpinner" class="loading-spinner" style="display: none;">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>

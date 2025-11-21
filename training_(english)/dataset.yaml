@@ -1,0 +1,7 @@
+path: stage1_dataset
+
+train: images/train
+val: images/val
+
+nc: 5
+names: ['Text','Title','List','Table','Figure']
