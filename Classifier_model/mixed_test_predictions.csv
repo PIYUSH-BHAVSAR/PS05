@@ -1,0 +1,57 @@
+filename,predicted_class,confidence
+00b6e5ba-dbbd-40fb-a772-be80005dd4c5.jpg,Printed,0.9987
+00cbdf33-4028-49ed-b291-b830015b6d8f.jpg,Printed,0.9468
+00d34530-9c64-42f7-803c-27d080ac7088.jpg,Printed,0.9039
+00d6b2c9-5878-4b2b-84c4-1ab2f6ad6323.jpg,Printed,0.9325
+00eff777-69bc-45b5-88e5-89727dada1d7.jpg,Printed,0.9536
+0a035b5c-5606-4354-9c1b-eabba1ba443e.jpg,Printed,0.715
+0a1d2d0a-1eb3-4661-88c8-8af2f2e7a104.png,Printed,0.9184
+0a1d6e43-811c-4a2e-83f1-33ad183b4d84.jpg,Printed,0.8842
+0a280808-250d-4176-bf97-24abed6187be.png,Printed,0.9257
+0a28c5f8-e72e-4918-a946-1a0c53a96dcc.png,Printed,0.9483
+0a33a6a9-ee84-4742-8862-749c73bdc06a.jpg,Printed,0.8378
+0a44bd60-77b0-487c-b12a-ca7cf7915185.jpg,Printed,0.984
+0a4eb882-6ed6-4b32-ab6d-866c968e073d.jpg,Printed,0.9975
+0a89899a-597c-4891-81b4-5a710ab72535.jpg,Printed,0.9097
+0a947867-10c6-4f0d-ad53-e0cff3df985f.jpg,Printed,0.9554
+0aa1a795-6cdc-4af3-ab2a-b272dfc909fa.jpg,Printed,0.9977
+72_WT ass 3_page-0001.jpg,Handwritten,0.8717
+72_WT ass 3_page-0002.jpg,Handwritten,0.8255
+72_WT ass 3_page-0003.jpg,Handwritten,0.9299
+72_WT ass 3_page-0004.jpg,Handwritten,0.8903
+72_WT ass 3_page-0005.jpg,Handwritten,0.9346
+72_WT ass 3_page-0006.jpg,Handwritten,0.8365
+72_WT ass 3_page-0007.jpg,Handwritten,0.8724
+72_WT ass 3_page-0008.jpg,Handwritten,0.8306
+72_WT ass 3_page-0009.jpg,Handwritten,0.7949
+72_WT ass 3_page-0010.jpg,Handwritten,0.9176
+72_WT ass 3_page-0011.jpg,Handwritten,0.9272
+72_WT ass 3_page-0012.jpg,Handwritten,0.8987
+72_WT ass 3_page-0013.jpg,Handwritten,0.895
+72_WT ass 3_page-0014.jpg,Handwritten,0.8718
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0001.jpg,Handwritten,0.9928
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0002.jpg,Handwritten,0.9939
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0003.jpg,Handwritten,0.9976
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0004.jpg,Handwritten,0.9967
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0005.jpg,Handwritten,0.9971
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0006.jpg,Handwritten,0.9936
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0007.jpg,Handwritten,0.9986
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0008.jpg,Handwritten,0.9633
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0009.jpg,Handwritten,0.996
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0010.jpg,Handwritten,0.9942
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0011.jpg,Handwritten,0.9964
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0012.jpg,Handwritten,0.9983
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0013.jpg,Handwritten,0.9974
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0014.jpg,Handwritten,0.9977
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0015.jpg,Handwritten,0.9995
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0016.jpg,Handwritten,0.9946
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0017.jpg,Handwritten,0.9991
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0018.jpg,Handwritten,0.9963
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0019.jpg,Handwritten,0.9889
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0020.jpg,Handwritten,0.9981
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0021.jpg,Handwritten,0.9705
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0022.jpg,Handwritten,0.9849
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0023.jpg,Handwritten,0.9796
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0024.jpg,Handwritten,0.9958
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0025.jpg,Handwritten,0.9853
+DocScanner_8_Oct_2025_12-41_pm[1]_page-0026.jpg,Handwritten,0.8942

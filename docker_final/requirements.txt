@@ -1,0 +1,7 @@
+ultralytics>=8.0.200
+torchvision
+opencv-python-headless
+numpy
+psutil
+Pillow
+tqdm

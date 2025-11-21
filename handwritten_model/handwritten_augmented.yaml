@@ -1,0 +1,5 @@
+train: handwritten_yolo_aug/images/train
+val: handwritten_yolo/images/val
+
+nc: 5
+names: ["Text", "Title", "List", "Table", "Figure"]

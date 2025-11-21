@@ -1,0 +1,13 @@
+path: ./handwritten_yolo
+
+train: images/train
+val: images/val
+
+nc: 5
+
+names:
+  0: Text
+  1: Title
+  2: List
+  3: Table
+  4: Figure

@@ -1,0 +1,40 @@
+# ------------------------------------------------------------
+# Base Image: PyTorch with CUDA 11.8 (Laptop + A100 compatible)
+# ------------------------------------------------------------
+FROM pytorch/pytorch:2.2.0-cuda11.8-cudnn8-runtime
+
+# Avoid interactive prompts
+ENV DEBIAN_FRONTEND=noninteractive
+
+# Working directory
+WORKDIR /app
+
+# ------------------------------------------------------------
+# Install OS dependencies required for OpenCV + YOLO
+# ------------------------------------------------------------
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    libgl1 \
+    libglib2.0-0 \
+    libsm6 \
+    libxext6 \
+    libxrender1 \
+    && rm -rf /var/lib/apt/lists/*
+
+# ------------------------------------------------------------
+# Copy Python dependencies file
+# ------------------------------------------------------------
+COPY requirements.txt .
+
+# Install Python dependencies
+RUN pip install --no-cache-dir -r requirements.txt
+
+# ------------------------------------------------------------
+# Copy project files into container
+# ------------------------------------------------------------
+COPY deskew_export_final.py ./predict.py
+COPY models ./models
+
+# ------------------------------------------------------------
+# Default execution (you override args at runtime)
+# ------------------------------------------------------------
+ENTRYPOINT ["python", "predict.py"]
